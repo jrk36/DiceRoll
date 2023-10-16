@@ -32,6 +32,8 @@ for rolls in range(numberOfRollsInteger):
 
                         print('Critical Hit!')
 
+https://github.com/jrk36/DiceRoll/blob/main/DiceRoll
+
                 #checks if die roll result is 1
                 elif randomDieRoll == 1:
 
