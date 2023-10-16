@@ -1,4 +1,3 @@
-#importing random number library
 import random
 
 #asking how many times to roll the die
@@ -16,9 +15,8 @@ sidesOnDieInteger = int(sidesOnDieInput)
 #using numberOfRollsInteger as range for how many times to roll the die
 for rolls in range(numberOfRollsInteger):
 
-        #setting sidesOnDieInteger for the random number range
-        #adding 1 to that because python considers 0 the first number and 0 is not on a die
-        randomDieRoll = random.randrange(sidesOnDieInteger) + 1
+        #setting random number range from 1 to sidesOnDieInteger
+        randomDieRoll = random.randint(1, sidesOnDieInteger)
 
         #shows die roll result on screen
         print('Your roll is:')
@@ -26,16 +24,15 @@ for rolls in range(numberOfRollsInteger):
 
         #checks if 20-sided die is being used
         if sidesOnDieInteger == 20:
+            
+                #if a 20-sided die is being used, checks:
+                
+                #checks if die roll result is 20
+                if randomDieRoll == 20:
 
-            #if 20-sided die is used, checks if die roll result is 20
-            if randomDieRoll == 20:
+                        print('Critical Hit!')
 
-                #shows 'Critical Hit!' on screen if 20-sided die is used and die roll result is 20
-                print('Critical Hit!')
+                #checks if die roll result is 1
+                elif randomDieRoll == 1:
 
-            #if 20-sided die is used, checks if die roll result is 1
-            elif randomDieRoll == 1:
-
-                #shows 'Critical Miss!' on screen if 20-sided die is used and die roll result is 1
-                print('Critical Miss!')
-
+                        print('Critical Miss!')
